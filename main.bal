@@ -1,11 +1,6 @@
 import ballerinax/mysql;
 import ballerinax/mysql.driver as _;
-
-public function main() {
-    io:println("Hello, World!");
-}
-import ballerinax/mysql;
-import ballerinax/mysql.driver as _;
+import ballerina/io;
 
 public function main() returns error?{
 
@@ -21,5 +16,7 @@ public function main() returns error?{
                                     );`);
 									
 	check mysqlClient.close();
+	
+	io:println("Hello, World!");
 
 }
