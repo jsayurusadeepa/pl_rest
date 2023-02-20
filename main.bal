@@ -3,12 +3,9 @@ import ballerinax/mysql.driver as _;
 
 public function main() returns error?{
 
-	mysql:Client mysqlClient = check new (host = "localhost", port = 3306, user = "root",
-                                          password = "1qaz2wsx@");
-										  
-	_ = check mysqlClient->execute(`CREATE DATABASE MARKS_STORE;`);
+	mysql:Client mysqlClient = check new ("sql12.freemysqlhosting.net", "sql12599595", "ZMdQjtRK4Q", "sql12599595", 3306);
 		
-	_ = check mysqlClient->execute(`CREATE TABLE MARKS_STORE.STUD_MARKS_STORE (
+	_ = check mysqlClient->execute(`CREATE TABLE sql12599595.STUD_MARKS_STORE (
 											stud_id VARCHAR(10),
 											stud_name VARCHAR(50),
 											stud_marks float
