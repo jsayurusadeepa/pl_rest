@@ -1,6 +1,5 @@
 import ballerinax/mysql;
 import ballerinax/mysql.driver as _;
-import ballerina/io;
 
 public function main() returns error?{
 
@@ -12,11 +11,9 @@ public function main() returns error?{
 	_ = check mysqlClient->execute(`CREATE TABLE MARKS_STORE.STUD_MARKS_STORE (
 											stud_id VARCHAR(10),
 											stud_name VARCHAR(50),
-											stud_marks REAL
+											stud_marks float
                                     );`);
 									
 	check mysqlClient.close();
-	
-	io:println("Hello, World!");
 
 }
